@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <title>CSW-Calculator</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="card-container" class="row container-fluid">
+
+        <h3 class="mx-3 my-2">CSW-Calculator</h3>
+        <div id="linktags" class="mx-3 my-2">
+            <div><a href="#weightandparitycard">Weight calculator and parity checker</a></div>
+            <div><a href="#permutationcard">Permutation - calculate the kth previous or next permutation</a></div>
+            <div><a href="#buyandsellstockcard">Buy and sell stock - calculate profit after first and second buy</a></div>
+            <div><a href="#bitshiftingcard">Bits shifitng - left shift and right shift</a></div>
+            <div><a href="#bitreversalcard">Bits reversal - reversing all the bits of a number</a></div>
+            <div><a href="#pascaltrianglecard">Pascal Triangle</a>
+            <div><a href="#sampleofflinedatacard">Sample Offline data - generate random subset</a></div>
+            <div><a href="#closestintegercard">Closest integer - calculate closest integer of same weight</a></div>
+            <div><a href="#changingbasescard">Converter - binary to octal to decimal to hexadecimal</a></div>
+            <div><a href="#division">Division - without using arithmetic operators</a></div>
+            <div><a href="#swapbitscard">Swap bits - swap the ith and jth bits</a></div>
+            </div>
+        </div>
+        <div class="card mx-3 my-2 card-style" id="weightandparitycard">
+            <div class="card-body">
+                <h5 class="card-title">Weight and Parity</h5>
+
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" placeholder="Enter the number" id="weightInput">
+                    <span class="input-group-text">10</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="binaryOutput" disabled="true">
+                    <span class="input-group-text">2</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="hexaOutput" disabled="true">
+                    <span class="input-group-text">16</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="weightOutput" disabled="true">
+                    <span class="input-group-text">Weight</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="parityOutput" disabled="true">
+                    <span class="input-group-text">Parity</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="permutationcard">
+            <div class="card-body">
+                <h5 class="card-title">Permutation</h5>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" placeholder="Enter the number (>=0)" id="pnumInput">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" placeholder="Enter the kth value" id="kInput">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="pOutput" disabled="true">
+                    <span class="input-group-text">Ans</span>
+                </div>
+
+                <button class="btn btn-primary my-2" id="pperm">Find prev permutation</button>
+                <button class="btn btn-primary my-2" id="nperm">Find next permutation</button>
+            </div>
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="buyandsellstockcard">
+
+            <div class="card-body">
+                <h5 class="card-title">Buy and sell a stock</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter the array" id="arrayInput">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="firstProfit" placeholder="Profit" disabled="true">
+                    <span class="input-group-text">First sell</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="SecondProfit" placeholder="Profit" disabled="true">
+                    <span class="input-group-text">Second sell</span>
+                </div>
+
+                <button class="btn btn-primary my-2" id="profitOutput">Find Profit</button>
+
+            </div>
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="bitshiftingcard">
+            <div class="card-body">
+                <h5 class="card-title">Bit Shifting</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="bitInput" placeholder="Enter the number">
+                    <span class="input-group-text">10</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <select class="form-select" aria-label="Default select example" id="chooseShift">
+                        <option selected>Shift Direction</option>
+                        <option value="1">&lt&ltLeft</option>
+                        <option value="2">&gt&gtRight</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="bitsShift" placeholder="Bits to shift">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="dOutput" disabled="true">
+                    <span class="input-group-text">10</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="bOutput" disabled="true">
+                    <span class="input-group-text">2</span>
+                </div>
+
+                <button class="btn btn-primary my-2" id="shift">Submit</button>
+            </div>
+
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="bitreversalcard">
+            <div class="card-body">
+                <h5 class="card-title">Bit Reversal</h5>
+
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="revInput" placeholder="Enter the number">
+                    <span class="input-group-text">10</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="revBinary">
+                    <span class="input-group-text">2</span>
+                </div>
+
+                <p class="card-text">After reversing</p>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="revOutputd" disabled="true">
+                    <span class="input-group-text">10</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="revOutputb" disabled="true">
+                    <span class="input-group-text">2</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="pascaltrianglecard">
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <h5 class="card-title">Pascal Triangle</h5>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" id="rowsOutput"
+                            placeholder="Enter the number of rows">
+                    </div>
+
+                    <p class="card-text">Pascal Triangle</p>
+
+                    <div class="form-floating input-group mb-3">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="ptriangle"
+                            style="height: 250px" disabled="true"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="sampleofflinedatacard">
+            <div class="card-body">
+                <h5 class="card-title">Sample Offline Data</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="dataInput" placeholder="Enter the array">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="randomInput" placeholder="Enter the random numbers">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="randomOutput" placeholder="Random subset"
+                        disabled="true">
+                </div>
+
+                <button class="btn btn-primary my-2" id="sample">Submit</button>
+            </div>
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="closestintegercard">
+            <div class="card-body">
+                <h5 class="card-title">Closest integer of same weight</h5>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="closestWeightInputd" placeholder="Enter decimal number">
+                    <span class="input-group-text">10</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="closestWeightInputb" placeholder="Enter binary number">
+                    <span class="input-group-text">2</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="cwOutputd" disabled="true">
+                    <span class="input-group-text">10</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="cwOutputb" disabled="true">
+                    <span class="input-group-text">2</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="changingbasescard">
+            <div class="card-body">
+                <h5 class="card-title">Changing bases</h5>
+                <p class="card-text">Binary->Octal->Decimal->Hexadecimal</p>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="binary">
+                    <span class="input-group-text">2</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="octal">
+                    <span class="input-group-text">8</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="decimal">
+                    <span class="input-group-text">10</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="hexadecimal">
+                    <span class="input-group-text">16</span>
+                </div>
+
+                <button class="btn btn-primary my-2" id="reset">x Reset</button>
+
+            </div>
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="division">
+            <div class="card-body">
+                <h5 class="card-title">Division</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="dividend" aria-label="Dividend" id="dividend">
+                    <span class="input-group-text">/</span>
+                    <input type="text" class="form-control" placeholder="divisor" aria-label="Divisor" id="divisor">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="quotient" placeholder="Quotient" disabled="true">
+                    <span class="input-group-text">q</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="remainder" placeholder="Remainder" disabled="true">
+                    <span class="input-group-text">r</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="valuesk" placeholder="K values in alternative loops"
+                        disabled="true">
+                    <span class="input-group-text">k</span>
+                </div>
+
+                <button class="btn btn-primary my-2" id="findDivide">Find</button>
+
+            </div>
+        </div>
+
+        <div class="card mx-3 my-2 card-style" id="swapbitscard">
+            <div class="card-body">
+                <h5 class="card-title">Swap ith and jth bits</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="swapdi" placeholder="Enter the number">
+                    <span class="input-group-text">10</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="swapbi" placeholder="Enter the number">
+                    <span class="input-group-text">2</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">ith and jth bits</span>
+                    <input type="text" class="form-control" placeholder="i" id="ith">
+                    <input type="text" class="form-control" placeholder="j" id="jth">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="swapdo" disabled="true">
+                    <span class="input-group-text">10</span>
+                </div>
+    
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="swapbo" disabled="true">
+                    <span class="input-group-text">2</span>
+                </div>
+
+                <button class="btn btn-primary my-2" id="swapout">Swap</button>
+                <button class="btn btn-primary my-2" id="resetswap">x Reset</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

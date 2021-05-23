@@ -1,0 +1,36 @@
+.card-style{
+    border: 2px solid black;
+    width: 21rem;
+    border-radius: 20px;
+    background-color: rgb(93, 89, 89);
+    color: white;
+    box-shadow:  10px 10px 8px #888888;
+}
+
+.card-style input{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.card-style span{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.card-style select{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.card-style h5{
+    font-family: 'Baloo 2', 'cursive';
+}
+
+.card-style button{
+    border: 2px solid black ;
+    border-radius: 10px;
+}
+
+.card-style button:hover{
+    border: 2px solid black;
+}
