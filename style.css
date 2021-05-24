@@ -34,3 +34,17 @@
 .card-style button:hover{
     border: 2px solid black;
 }
+
+#linktags a{
+
+    font-style: italic;
+    font-weight: 500;
+}
+
+#helpinfoprofit{
+    color: black;
+    font-family: 'Baloo 2', 'cursive';
+    font-weight: 600;
+    font-size: 20px;
+    visibility: hidden;
+}

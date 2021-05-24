@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5e87775eec.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
-    <title>CSW-Calculator</title>
+    <title>CSW-Problem-Solver</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#" style="font-weight: bold;">CSW</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -28,24 +29,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -57,20 +41,21 @@
     </nav>
 
     <div id="card-container" class="row container-fluid">
-
-        <h3 class="mx-3 my-2">CSW-Calculator</h3>
+        <h3 class="mx-3 my-2 container text-center" style="font-family: 'Baloo 2', 'cursive'; font-weight: bold;">CSW PROBLEM SOLVER</h3>
         <div id="linktags" class="mx-3 my-2">
+            <h3 style="font-family: 'Baloo 2', 'cursive'">HYPERLINKS</h3>
             <div><a href="#weightandparitycard">Weight calculator and parity checker</a></div>
             <div><a href="#permutationcard">Permutation - calculate the kth previous or next permutation</a></div>
-            <div><a href="#buyandsellstockcard">Buy and sell stock - calculate profit after first and second buy</a></div>
+            <div><a href="#buyandsellstockcard">Buy and sell stock - calculate profit after first and second buy</a>
+            </div>
             <div><a href="#bitshiftingcard">Bits shifitng - left shift and right shift</a></div>
             <div><a href="#bitreversalcard">Bits reversal - reversing all the bits of a number</a></div>
             <div><a href="#pascaltrianglecard">Pascal Triangle</a>
-            <div><a href="#sampleofflinedatacard">Sample Offline data - generate random subset</a></div>
-            <div><a href="#closestintegercard">Closest integer - calculate closest integer of same weight</a></div>
-            <div><a href="#changingbasescard">Converter - binary to octal to decimal to hexadecimal</a></div>
-            <div><a href="#division">Division - without using arithmetic operators</a></div>
-            <div><a href="#swapbitscard">Swap bits - swap the ith and jth bits</a></div>
+                <div><a href="#sampleofflinedatacard">Sample Offline data - generate random subset</a></div>
+                <div><a href="#closestintegercard">Closest integer - calculate closest integer of same weight</a></div>
+                <div><a href="#changingbasescard">Converter - binary to octal to decimal to hexadecimal</a></div>
+                <div><a href="#division">Division - without using arithmetic operators</a></div>
+                <div><a href="#swapbitscard">Swap bits - swap the ith and jth bits</a></div>
             </div>
         </div>
         <div class="card mx-3 my-2 card-style" id="weightandparitycard">
@@ -101,6 +86,11 @@
                     <input type="text" class="form-control" id="parityOutput" disabled="true">
                     <span class="input-group-text">Parity</span>
                 </div>
+
+                <button class="btn btn-primary my-2 mx-2" id="resetweight">
+                    <i class="fa fa-refresh"></i>
+                </button>
+
             </div>
         </div>
 
@@ -122,6 +112,9 @@
 
                 <button class="btn btn-primary my-2" id="pperm">Find prev permutation</button>
                 <button class="btn btn-primary my-2" id="nperm">Find next permutation</button>
+                <button class="btn btn-primary my-2 mx-2" id="resetpermutation">
+                    <i class="fa fa-refresh"></i>
+                </button>
             </div>
         </div>
 
@@ -143,7 +136,17 @@
                     <span class="input-group-text">Second sell</span>
                 </div>
 
-                <button class="btn btn-primary my-2" id="profitOutput">Find Profit</button>
+                <button class="btn btn-primary my-2 mx-2" id="profitOutput">Find Profit</button>
+                <button class="btn btn-primary my-2 mx-2" id="resetprofit">
+                    <i class="fa fa-refresh"></i>
+                </button>
+                <button class="btn btn-secondary my-2 mx-2" id="helpprofit">
+                    <i class="fa fa-question-circle"></i>
+                </button>
+                
+                <div class="input-group mb-3 my-2 text-center" id = "helpinfoprofit">
+                    Input the array elements by separating them with commas
+                </div>
 
             </div>
         </div>
@@ -179,6 +182,10 @@
                 </div>
 
                 <button class="btn btn-primary my-2" id="shift">Submit</button>
+                <button class="btn btn-primary my-2 mx-2" id="resetshift">
+                    <i class="fa fa-refresh"></i>
+                </button>
+
             </div>
 
         </div>
@@ -209,6 +216,9 @@
                     <span class="input-group-text">2</span>
                 </div>
 
+                <button class="btn btn-primary my-2" id="resetreverse">
+                    <i class="fa fa-refresh"></i>
+                </button>
             </div>
         </div>
 
@@ -225,8 +235,9 @@
 
                     <div class="form-floating input-group mb-3">
                         <textarea class="form-control" placeholder="Leave a comment here" id="ptriangle"
-                            style="height: 250px" disabled="true"></textarea>
+                            style="height: 230px" disabled="true"></textarea>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -248,6 +259,9 @@
                 </div>
 
                 <button class="btn btn-primary my-2" id="sample">Submit</button>
+                <button class="btn btn-primary my-2 mx-2" id="resetoffline">
+                    <i class="fa fa-refresh"></i>
+                </button>
             </div>
         </div>
 
@@ -274,6 +288,10 @@
                     <input type="text" class="form-control" id="cwOutputb" disabled="true">
                     <span class="input-group-text">2</span>
                 </div>
+
+                <button class="btn btn-primary my-2" id="resetclosestweight">
+                    <i class="fa fa-refresh"></i>
+                </button>
             </div>
         </div>
 
@@ -302,7 +320,9 @@
                     <span class="input-group-text">16</span>
                 </div>
 
-                <button class="btn btn-primary my-2" id="reset">x Reset</button>
+                <button class="btn btn-primary my-2" id="reset">
+                    <i class="fa fa-refresh"></i>
+                </button>
 
             </div>
         </div>
@@ -333,6 +353,9 @@
                 </div>
 
                 <button class="btn btn-primary my-2" id="findDivide">Find</button>
+                <button class="btn btn-primary my-2 mx-2" id="resetdivision">
+                    <i class="fa fa-refresh"></i>
+                </button>
 
             </div>
         </div>
@@ -360,14 +383,16 @@
                     <input type="text" class="form-control" id="swapdo" disabled="true">
                     <span class="input-group-text">10</span>
                 </div>
-    
+
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" id="swapbo" disabled="true">
                     <span class="input-group-text">2</span>
                 </div>
 
                 <button class="btn btn-primary my-2" id="swapout">Swap</button>
-                <button class="btn btn-primary my-2" id="resetswap">x Reset</button>
+                <button class="btn btn-primary my-2 mx-2" id="resetswap">
+                    <i class="fa fa-refresh"></i>
+                </button>
             </div>
 
 

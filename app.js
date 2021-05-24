@@ -472,3 +472,59 @@ function afterSwapping(n, i, j) {
         return n;
     }
 }
+
+//Reset Section
+document.getElementById("resetweight").addEventListener("click",()=>{
+    Array.from(document.getElementById("weightandparitycard").getElementsByTagName("input")).forEach(element =>{
+        element.value = "";
+    });
+});
+
+document.getElementById("resetpermutation").addEventListener("click",()=>{
+    Array.from(document.getElementById("permutationcard").getElementsByTagName("input")).forEach(element =>{
+        element.value = "";
+    });
+});
+
+document.getElementById("resetprofit").addEventListener("click",()=>{
+    Array.from(document.getElementById("buyandsellstockcard").getElementsByTagName("input")).forEach(element =>{
+        element.value = "";
+    });
+});
+
+document.getElementById("resetshift").addEventListener("click",()=>{
+    Array.from(document.getElementById("bitshiftingcard").getElementsByTagName("input")).forEach(element =>{
+        element.value = "";
+    });
+
+    chooseshift.selectedIndex = "0";
+});
+
+document.getElementById("resetreverse").addEventListener("click",()=>{
+    Array.from(document.getElementById("bitreversalcard").getElementsByTagName("input")).forEach(element =>{
+        element.value = "";
+    });
+});
+
+document.getElementById("resetoffline").addEventListener("click",()=>{
+    Array.from(document.getElementById("sampleofflinedatacard").getElementsByTagName("input")).forEach(element =>{
+        element.value = "";
+    });
+});
+
+document.getElementById("resetclosestweight").addEventListener("click",()=>{
+    Array.from(document.getElementById("closestintegercard").getElementsByTagName("input")).forEach(element =>{
+        element.value = "";
+    });
+});
+
+document.getElementById("resetdivision").addEventListener("click",()=>{
+    Array.from(document.getElementById("division").getElementsByTagName("input")).forEach(element =>{
+        element.value = "";
+    });
+});
+
+
+document.getElementById("helpprofit").addEventListener("click",()=>{
+    document.getElementById("helpinfoprofit").style.visibility = 'visible'; 
+});
